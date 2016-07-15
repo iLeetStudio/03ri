@@ -1,18 +1,3 @@
-<!-- 
-
-    ВНИМАНИЕ!
-    
-    Если вы уже просмотрели код данного сайта, прошу его и нас не оскор_блять. Мы отлично понимаем, насколько этот код извращен.
-    Задается вопрос: "Тогда почему вы не написали нормальный код?". Ответ: "Цена проекта - 10.000 руб!".
-
-    Сомневаюсь, что кто-то бы стал вкладывать душу в данный проект за такую мизерную цену. Вот и мы не стали париться :)
-
-    P.S: Кстати, дизайн для этого сайта мы делали сами на Sketch и ББББЕСПЛАТНО!!!11. В данную сумму входила только разработка сайта, без дезигна.
-
-    С уважением, лучшая в мире команда девелоперов и дезигнеров - iLeet.
-
--->
-
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -20,6 +5,33 @@
 	<title>Главная</title>
     
     <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+    <script>
+        //Сокращает новости до 15 слов.
+        $('document').ready(function () {
+            for(var i = 0; i < 4; i++) {
+                var str = "",
+                countWord = 0,
+                textItem = $('.item'+ i + ' p').text();
+                for(var j = indexOf(textItem); countWord <= 15; j++){
+                    str+=textItem[j];
+                    if(textItem[j] == ' ') countWord++;
+                }
+                $('.item'+ i + ' p').text(str+'...');
+            }
+        });
+
+        function indexOf(str) {
+            var alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя',
+            upperAlphabet = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ';
+
+            for(var i = 0; i < str.length; i++) {
+                for(var j = 0; j < alphabet.length; j++) {
+                    if(str[i] == alphabet[j] || str[i] == upperAlphabet[j]) return i;
+                }
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -50,10 +62,10 @@
                 
                     <li class="active"><a href="/">Главная</a></li>
                     <li><a href="/about">О нас</a></li>
-                    <li><a href="/istoriya">История скорой</a></li>
+                    <li><a href="/history">История скорой</a></li>
                     <li><a href="/structura">Структура РССМП</a></li>
-                    <li><a href="/personal">Персонал РССМП</a></li>
-                    <li><a href="/kadrovaya">Кадровая работа</a></li>
+                    <li><a href="/personnel">Персонал РССМП</a></li>
+                    <li><a href="/kadrovaya">Отдел кадров</a></li>
                     <li><a href="/vakansii">Вакансии</a></li>
                     <li><a href="/rekvizit">Реквизиты</a></li>
                 
@@ -89,7 +101,7 @@
         
             <h1>Новости</h1>
         
-            <div class="item" style="top: 80px; left: 60px;">
+            <div class="item item0" style="top: 80px; left: 60px;">
                 <img src="img/news/mini_news.jpg" />
                 <h4>В Ингушетии состоялись командно-штабные учения МЧС</h4>
                 <p>
@@ -97,7 +109,7 @@
                 </p>
             </div>
             
-            <div class="item" style="top: 80px; right: 60px;">
+            <div class="item item1" style="top: 80px; right: 60px;">
                 <img src="img/news/mini_news.jpg" />
                 <h4>В Ингушетии состоялись командно-штабные учения МЧС</h4>
                 <p>
@@ -105,7 +117,7 @@
                 </p>
             </div>
             
-            <div class="item" style="top: 285px; left: 60px;">
+            <div class="item item2" style="top: 285px; left: 60px;">
                 <img src="img/news/mini_news.jpg" />
                 <h4>В Ингушетии состоялись командно-штабные учения МЧС</h4>
                 <p>
@@ -113,7 +125,7 @@
                 </p>
             </div>
             
-            <div class="item" style="top: 285px; right: 60px;">
+            <div class="item item3" style="top: 285px; right: 60px;">
                 <img src="img/news/mini_news.jpg" />
                 <h4>В Ингушетии состоялись командно-штабные учения МЧС</h4>
                 <p>
