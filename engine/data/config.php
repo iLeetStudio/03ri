@@ -8,7 +8,7 @@ $config = array (
 
 'http_home_url' => 'http://localhost/03ri/',
 
-'charset' => 'utf-8',
+'charset' => 'windows-1252',
 
 'description' => 'Демонстрационная страница движка DataLife Engine',
 

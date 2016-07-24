@@ -1,0 +1,146 @@
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+.clearfix:after {
+  clear: both;
+  content: ' ';
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+.clearfix {
+  display: inline-block;
+}
+#carousel-wrapper {
+  position: relative;
+  width: 92%;
+  margin: 30px auto 20px;
+}
+#carousel-wrapper .d-carousel ul li {
+  background: none;
+  background-color: #FFF;
+  padding: 15px;
+  width: 235px;
+  text-align: center;
+}
+#carousel-wrapper .d-carousel ul li p {
+  color: #aaa;
+  font-size: 12px;
+}
+#carousel-wrapper .d-carousel ul li img {
+  max-width: 100%;
+  border-radius: 3px;
+}
+#carousel-wrapper .d-carousel ul li > a {
+  height: 225px;
+  display: block;
+  overflow: hidden;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  position: relative;
+}
+#carousel-wrapper .d-carousel ul li > a div {
+  display: block;
+  position: absolute;
+  opacity: 0;
+  bottom: 10px;
+  background-color: #fff;
+  padding: 4px 0px 4px 12px;
+  text-align: center;
+  width: 135px;
+  font-size: 13px;
+  border-radius: 25px;
+  font-weight: 600;
+  color: #18AAE4;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  transition: all 0.2s;
+}
+#carousel-wrapper .d-carousel ul li > a:hover div {
+  opacity: 1;
+  bottom: 15px;
+}
+#carousel-wrapper .d-carousel ul li > a div:before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  background: url(../img/phone_icon.png) no-repeat;
+  width: 15px;
+  height: 15px;
+  background-position: center;
+  background-size: 100%;
+}
+.jcarousel-direction-rtl {
+  direction: rtl;
+}
+.d-carousel h4 {
+  font-size: 14px;
+  margin: 5px 0 -5px 0;
+}
+.d-carousel .jcarousel-container {
+  display: block;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.d-carousel .jcarousel-item {
+  width: 220px;
+  height: 300px;
+}
+.d-carousel .jcarousel-container-horizontal {
+  height: 325px;
+  padding: 0 45px;
+}
+.d-carousel .jcarousel-item-horizontal {
+  margin-left: 3px;
+  margin-bottom: 3px;
+  margin-top: 3px;
+  margin-right: 11px;
+}
+.d-carousel .jcarousel-next-horizontal {
+  position: absolute;
+  top: 115px;
+  right: 0px;
+  margin-left: 3px;
+  width: 24px;
+  height: 41px;
+  transform: rotate(180deg);
+  cursor: pointer;
+  opacity: 0.5;
+  background: transparent url(../img/arrow_slider.png) no-repeat top left;
+}
+.d-carousel .jcarousel-direction-rtl .jcarousel-next-horizontal {
+  left: 5px;
+  right: auto;
+  background-image: url(../img/blog-arrows.jpg);
+}
+.d-carousel .jcarousel-prev-horizontal {
+  position: absolute;
+  top: 115px;
+  left: 0px;
+  margin-left: 3px;
+  width: 24px;
+  height: 41px;
+  cursor: pointer;
+  opacity: 0.5;
+  background: transparent url(../img/arrow_slider.png) no-repeat top left;
+}
+.d-carousel .jcarousel-direction-rtl .jcarousel-prev-horizontal {
+  left: auto;
+  right: 5px;
+  background-image: url(../img/blog-arrows.jpg);
+}
+.d-carousel .jcarousel-prev-horizontal:hover,
+.d-carousel .jcarousel-next-horizontal:hover {
+  opacity: 1;
+}

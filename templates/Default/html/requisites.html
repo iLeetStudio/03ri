@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Вакансии</title>
+    
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/styleHRD.css" />
+    <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+    <script>
+        $('document').ready(function () {
+            for(var i = 0; i < 6; i++) {
+                $('.wrapperLisenses').append('<a href="img/requisites/'+(i+1)+'.jpg"></a>');
+                $('[href = "img/requisites/'+(i+1)+'.jpg"]').append('<div class = "lisens lisens'+(i+1)+'"></div>');
+                $('.lisens'+(i+1)).css({'background':'url(img/requisites/'+(i+1)+'.jpg) no-repeat', 'background-size':'cover'});
+            }
+        });
+    </script>
+    </head>
+
+<body>
+
+    <div id="content-wrapper">
+    
+        <header>
+        
+            <div class="left-block">
+                <img src="img/logo.png" />
+                <div>
+                    <span>ГБУ г. Назрань</span><br />
+                    Государственное Бюджетное Учреждение "Республиканская Станция Медицинской Скорой Помощи"
+                </div>
+            
+            </div>
+            
+            <div class="right-block">
+            
+                <span>8 (8732) 22-72-25</span>
+                <p>386140 РИ г. Назрань, а/о Насыр-Корт, ул. Бакинская,7 "а"</p>
+            
+            </div>
+        
+            <nav id="main-nav">
+                
+                <ul>
+                
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/about">О нас</a></li>
+                    <li><a href="/history">История скорой</a></li>
+                    <li><a href="/structura">Структура РССМП</a></li>
+                    <li><a href="/personnel">Персонал РССМП</a></li>
+                    <li><a href="/kadrovaya">Отдел кадров</a></li>
+                    <li><a href="/vakansii">Вакансии</a></li>
+                    <li class = "active"><a href="/rekvizit">Реквизиты</a></li>
+                    
+                </ul>
+            
+            </nav>
+        
+        </header>
+        <div class="content">
+            <div class = "wrapperButtons">
+            <div class = "wrapperDownloadFile">
+                <div class = "wrapperText">
+                    <span>Режим работы РССМП</span>
+                </div>
+                <div class = "wrapperImgDownload">
+                    <div class = "imgDownload"></div>
+                </div>
+            </div>
+            <div class = "wrapperDownloadFile">
+                <div class = "wrapperText">
+                    <span>Контакты</span>
+                </div>
+                <div class = "wrapperImgDownload">
+                    <div class = "imgDownload"></div>
+                </div>
+            </div>
+            <div class = "wrapperDownloadFile">
+                <div class = "wrapperText">
+                    <span>Заработная плата</span>
+                </div>
+                <div class = "wrapperImgDownload">
+                    <div class = "imgDownload"></div>
+                </div>
+            </div>
+            <div class = "wrapperDownloadFile">
+                <div class = "wrapperText largeText">
+                    <span>Лекарственные средства</span>
+                </div>
+                <div class = "wrapperImgDownload">
+                    <div class = "imgDownload"></div>
+                </div>
+            </div>
+            <div class = "wrapperDownloadFile">
+                <div class = "wrapperText largeText">
+                    <span>Виды оказываемой медицинской помощи</span>
+                </div>
+                <div class = "wrapperImgDownload">
+                    <div class = "imgDownload"></div>
+                </div>
+            </div>
+            </div>
+            <div class = "wrapperLisenses"></div>
+        </div>
+        
+        <footer>
+        
+            <div class="about-site">
+                <h4>О нас</h4>
+                <p>Скорая медицинская помощь г. Назрань - вид и система экстренной медицинской помощи больным и пострадавшим при угрожающих жизни и здоровью человека состояниях, травмах, оказываемой в местах происшествия: на улице, общественных местах, учреждениях, на дому и в пути следования, при доставке заболевшего в стационар.</p>
+            </div>
+            
+            <ul class="categories">
+                <li><h4>Категории</h4></li>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/about">О нас</a></li>
+                <li><a href="/rezume">Резюме</a></li>
+                <li><a href="/history">История</a></li>
+                <li><a href="/personnel">Персонал</a></li>
+                <li><a href="/vakansii">Вакансии</a></li>
+            </ul>
+            
+            <ul class="resources">
+                <li><h4>Ресурсы РИ</h4></li>
+                <li><a href="http://www.ingushetia.ru/">Официальный сайт президента</a></li>
+                <li><a href="http://www.pravitelstvori.ru/">Правительство</a></li>
+                <li><a href="http://www.parlamentri.ru/">Народное собрание</a></li>
+                <li><a href="http://minzdravri.ru/">Министерство здравоохранения</a></li>
+                <li><a href="http://06reg.roszdravnadzor.ru/">Орган Росздравнадзора</a></li>
+                <li><a href="http://www.pfrf.ru/ot_ingush/">Пенсионный фонд РФ</a></li>
+            </ul>
+            
+            <ul class="numbers">
+                <li><h4>Резервные номера</h4></li>
+                <li>8 (8732) 22-72-25</li>
+                <li>8 (8732) 22-24-10</li>
+                <li><br />Сайт разработан студией "<span style="font-weight: 600;"><a href="http://ileet.ru">iLeet</a></span>"</li>
+            </ul>
+        
+        </footer>
+    </div>
+</body>

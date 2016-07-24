@@ -6,6 +6,9 @@
 	<title>Главная</title>
     
     <link href="{THEME}/css/style.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="{THEME}/js/jquery-2.2.0.min.js"></script>
+	<script type="text/javascript" src="{THEME}/js/d3.min.js"></script>
+	<script src="{THEME}/js/main.js" type="text/javascript"></script>
 </head>
 
 <body>
