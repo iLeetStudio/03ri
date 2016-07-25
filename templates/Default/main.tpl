@@ -6,6 +6,9 @@
 	<title>Главная</title>
     
     <link href="{THEME}/css/style.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="{THEME}/js/jquery-2.2.0.min.js"></script>
+	<script type="text/javascript" src="{THEME}/js/d3.min.js"></script>
+	<script src="{THEME}/js/main.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -44,11 +47,14 @@
                 <li [static=kadrovaya]class="active"[/static]><a href="kadrovaya.html">Отдел кадров</a></li>
                 <li [static=vakansii]class="active"[/static]><a href="vakansii.html">Вакансии</a></li>
                 <li [static=rekvizit]class="active"[/static]><a href="rekvizit.html">Реквизиты</a></li>
+                <li [static=opros]class="active"[/static]><a href="opros.html">Опрос</a></li>
             
             </ul>
         
         </nav>
         
+        [available=main]
+
         <div id="main-news">
 	
 			{custom template="modules/custom-news-big" available="main" from="0" limit="1" order="date" sort="desc" cache="yes"}
@@ -58,8 +64,6 @@
 			{custom template="modules/custom-news-small" available="main" from="2" limit="1" order="date" sort="desc" cache="yes"}
         
         </div>
-        
-		[available=main]
 
         <div id="news">
         
@@ -142,14 +146,14 @@
                     386140 РИ г. Назрань, а/о Насыр-Корт, ул. Бакинская, 7а
                 </div>
                 
-                <form method="POST" name="feedback">
-                
+                <form method="POST" action="index.php?do=feedback">
+                    <input type="hidden" value="send">
                     <div class="form-group"><label for="">ФИО:</label><input name="name" required type="text"></div>
                     <div class="form-group"><label for="">Ваш E-Mail:</label><input name="email" required type="text"></div>
                     <div class="form-group"><label for="">Тема сообщения:</label><input name="subject" required type="text"></div>
                     <div class="form-group"><label for="">Ваш телефон:</label><input placeholder="+7 (9XX) XXX-XX-XX" name="phone" required type="text"></div>
 
-                    <div class="form-group textarea"><label for="">Текст:</label><textarea name="text"></textarea></div>
+                    <div class="form-group textarea"><label for="">Текст:</label><textarea name="message"></textarea></div>
                     
                     <button class="clearfix">Отправить</button>
 

@@ -38,7 +38,7 @@ if( ! defined( 'DATALIFEENGINE' ) ) {
 		
 		$subject = strip_tags( stripslashes( $_POST['subject'] ) );
 		$message = stripslashes( $_POST['message'] );
-		$recip = intval( $_POST['recip'] );
+		$recip = 1;
 
 		if( !$user_group[$member_id['user_group']]['allow_feed'] )	{
 

@@ -1,0 +1,217 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Персонал РССМП</title>
+    
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/stylePersonnel.css" />
+    <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="js/d3.min.js"></script>
+    <script>
+        //Вставляет фото персонала в нужный блок
+        $('document').ready(function () {
+            for(var i = 0; i < 9; i++) {
+                $('.img'+(i+1)).css({'background': 'url(img/personal/'+(i+2)+'.jpg) no-repeat', 'background-size':'cover'});
+            }
+
+            var svg = d3.select('.wrapper-svg')
+                .append('svg')
+                .attr('width', '100%')
+                .attr('height', '100%');                
+            
+            svg.append('rect')
+                .attr('x', $('svg').width()*0.5 - 250/2)
+                .attr('y', 20)
+                .attr('rx', 10);
+
+            svg.append('text')
+                .text('ГБУ "РССМП"')
+                .attr('x', ($('svg').width()*0.5 - 250/2)+60)
+                .attr('y', 60);
+
+            svg.append('text')
+                .classed('address', true)
+                .text('Адрес: г. Назрань а/о Насыр-Корт')
+                .attr('x', $('svg').width()*0.5 - 250/2 + 35)
+                .attr('y', 75);
+
+            svg.append('text')
+                .classed('address', true)
+                .text('улица Бакинская 7а')
+                .attr('x', $('svg').width()*0.5 - 250/2 + 65)
+                .attr('y', 90);
+
+            svg.append('text')
+                .classed('address', true)
+                .text('03 030 22-72-25')
+                .attr('x', $('svg').width()*0.5 - 250/2 + 80)
+                .attr('y', 105);
+            
+            svg.append('text')
+                .classed('address', true)
+                .text('22-24-10')
+                .attr('x', $('svg').width()*0.5 - 250/2 + 100)
+                .attr('y', 120);
+
+            for(var i = 0; i < 3; i++) {
+                svg.append('rect')
+                    .classed('substation', true)
+                    .attr('x', 300*i+5)
+                    .attr('y', $('svg').height() / 2 + 40)
+                    .attr('rx', 10)
+            }
+
+            arrow(svg, 330, 40, 'leftArrow');
+            arrow(svg, 425, 235);
+            arrow(svg, 380, 535, 'rightArrow');
+
+//Заголовки трех блоков подстанций ------------------------------------------
+            svg.append('text')
+                .text('Подстанция с. Кантышево')
+                .style('font-size', '19')
+                .attr('x', 9)
+                .attr('y', 280);
+
+            svg.append('text')
+                .text('Подстанция с. Сурхахи')
+                .style('font-size', '19')
+                .attr('x', 322)
+                .attr('y', 280);
+
+            svg.append('text')
+                .text('Подстанция с. Яндаре')
+                .style('font-size', '19')
+                .attr('x', 625)
+                .attr('y', 280);
+
+//Адресс трех блоков подстанций --------------------------------------------
+            svg.append('text')
+                .classed('address', true)
+                .text('Адрес: с. Кантышево, ул. Шерипова, 25')
+                .attr('x', 15)
+                .attr('y', 295);
+            
+            svg.append('text')
+                .classed('address', true)
+                .text('тел.: 8-928-728-01-03')
+                .attr('x', 65)
+                .attr('y', 310);
+
+            svg.append('text')
+                .classed('address', true)
+                .text('Адрес: с. Сурхахи, ул. Аушева, 26')
+                .attr('x', 332)
+                .attr('y', 295);
+
+            svg.append('text')
+                .classed('address', true)
+                .text('тел.: 8-928-747-50-84')
+                .attr('x', 365)
+                .attr('y', 310);
+
+            svg.append('text')
+                .classed('address', true)
+                .text('Адрес: с. Яндаре, ул. Мальсагова, 56')
+                .attr('x', 622)
+                .attr('y', 295);
+
+            svg.append('text')
+                .classed('address', true)
+                .text('тел.: 8-964-644-09-38')
+                .attr('x', 665)
+                .attr('y', 310);
+
+//Метод создания стрелок по координатам ------------------------------------------
+            function arrow(svg, x, y, className = 'normal') {
+                svg.append('polygon')
+                    .classed(className, true)
+                    .attr('points', ''+x+','+y+' '+(x+40)+','+(y-20)+' '+(x+20)+','+(y-20)+' '+(x+25)+','+(y-60)+' '+(x-25)+','+(y-60)+' '+(x-20)+','+(y-20)+' '+(x-40)+','+(y-20)+'')
+            }
+        });
+    </script>
+    </head>
+
+<body>
+
+    <div id="content-wrapper">
+    
+        <header>
+        
+            <div class="left-block">
+                <img src="img/logo.png" />
+                <div>
+                    <span>ГБУ г. Назрань</span><br />
+                    Государственное Бюджетное Учреждение "Республиканская Станция Медицинской Скорой Помощи"
+                </div>
+            
+            </div>
+            
+            <div class="right-block">
+            
+                <span>8 (8732) 22-72-25</span>
+                <p>386140 РИ г. Назрань, а/о Насыр-Корт, ул. Бакинская,7 "а"</p>
+            
+            </div>
+        
+            <nav id="main-nav">
+                
+                <ul>
+                
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/about">О нас</a></li>
+                    <li><a href="/history">История скорой</a></li>
+                    <li class="active"><a href="/structura">Структура РССМП</a></li>
+                    <li><a href="/personnel">Персонал РССМП</a></li>
+                    <li><a href="/kadrovaya">Отдел кадров</a></li>
+                    <li><a href="/vakansii">Вакансии</a></li>
+                    <li><a href="/rekvizit">Реквизиты</a></li>
+                
+                </ul>
+            
+            </nav>
+        
+        </header>
+        <div class="content">
+            <h1 id = "headerTextCenter">Станция скорой помощи располагает подстанциями в селах Кантышево, Сурхахи, Яндаре.<br/>
+Благодаря им скорая медицинская помощь оказывается с наименьшими затратами времени на приезд к пациенту.</h1>
+            <div class="wrapper-svg"></div>
+        </div>
+        
+        <footer>
+        
+            <div class="about-site">
+                <h4>О нас</h4>
+                <p>Скорая медицинская помощь г. Назрань - вид и система экстренной медицинской помощи больным и пострадавшим при угрожающих жизни и здоровью человека состояниях, травмах, оказываемой в местах происшествия: на улице, общественных местах, учреждениях, на дому и в пути следования, при доставке заболевшего в стационар.</p>
+            </div>
+            
+            <ul class="categories">
+                <li><h4>Категории</h4></li>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/about">О нас</a></li>
+                <li><a href="/rezume">Резюме</a></li>
+                <li><a href="/history">История</a></li>
+                <li><a href="/personnel">Персонал</a></li>
+                <li><a href="/vakansii">Вакансии</a></li>
+            </ul>
+            
+            <ul class="resources">
+                <li><h4>Ресурсы РИ</h4></li>
+                <li><a href="http://www.ingushetia.ru/">Официальный сайт президента</a></li>
+                <li><a href="http://www.pravitelstvori.ru/">Правительство</a></li>
+                <li><a href="http://www.parlamentri.ru/">Народное собрание</a></li>
+                <li><a href="http://minzdravri.ru/">Министерство здравоохранения</a></li>
+                <li><a href="http://06reg.roszdravnadzor.ru/">Орган Росздравнадзора</a></li>
+                <li><a href="http://www.pfrf.ru/ot_ingush/">Пенсионный фонд РФ</a></li>
+            </ul>
+            
+            <ul class="numbers">
+                <li><h4>Резервные номера</h4></li>
+                <li>8 (8732) 22-72-25</li>
+                <li>8 (8732) 22-24-10</li>
+                <li><br />Сайт разработан студией "<span style="font-weight: 600;"><a href="http://ileet.ru">iLeet</a></span>"</li>
+            </ul>
+        
+        </footer>
+    </div>
+</body>

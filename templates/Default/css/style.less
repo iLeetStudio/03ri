@@ -98,7 +98,7 @@ ul {
 
 		}
 
-	}
+	} 
 
 	#main-nav {
 	    width: 100%;
@@ -108,7 +108,7 @@ ul {
 
 		ul {	
 
-			width: 1085px;
+			width: 1177px;
 		    margin: 0px auto;
 		    display: block;
 
@@ -353,15 +353,15 @@ ul {
 
 		    }
 
-		    > div:nth-child(1),> div:nth-child(3) {
+		    > div:nth-child(2),> div:nth-child(4) {
 		    margin-right: 6%;
 		    }
 
-		    > div:nth-child(2),> div:nth-child(4) {
+		    > div:nth-child(5),> div:nth-child(6) {
 		        width: 47%;
 		    }
 
-		    input {
+		    input[type="text"] {
 		        float: left;
 		        display: block;
 		        border: 1px solid #D4DBE4;
@@ -374,7 +374,7 @@ ul {
 		        transition: all 0.2s;
 		    }
 
-		    input:focus, textarea:focus {
+		    input[type="text"]:focus, textarea:focus {
 		        border-color: #6ac6ea;
 		    }
 
@@ -491,113 +491,260 @@ ul {
 	.content {
 
 	    display: block;
-	    width: 1100px;
+	    width: 1210px;
 	    margin: 0 auto 60px;
 
 		p {
 			line-height: 28px;
 			text-align: justify;
 		}
+		//New css----------------------------------------------
+		.personal-center-block {
+			display: block;
+			width: 800px;
+			height: 1520px;
+			margin: 0 auto;
+			margin-top: 50px;
+			
+			.personnel-line {
+				width: 90%;
+				height: 350px;
+				margin: 0 auto;
+			}
 
-		.wrapperPersonalBlock .img {
-		    width: 250px;
-		    height: 250px;
-		    background: url(../img/personal/5.jpg) no-repeat;
-		    background-size: cover;
-		    float: left;
-		    margin: 9px 40px 20px 0;
-		    border-radius: 100%;
-		}
+			.personnel {
+				width: 200px;
+				height: 340px;
+				margin-bottom: 5%;
+				margin-right: 60px;
+				text-align: center;
+				float: left;
 
-		#content-wrapper .content .personnel:nth-child(1n) {
-		    margin-left: 5%;
+				span {
+					font-size: 15px;
+					opacity: 0.7;
+				}
+
+				span:nth-child(3) {
+					font-weight: 700;
+					margin-top: 10px;
+					margin-bottom: 10px;
+					display: block;
+				}
+
+				.img {
+					width: 205px;
+					height: 205px;
+					border-radius: 100%;
+					margin-bottom: 7%;
+					background: #bdc3c7;
+					position: relative;
+					transition: 0.3s ease-in;
+				}
+
+				.img:hover {
+					transform: translateY(-4px);
+					box-shadow: 0 7px 10px 0 #666;
+				}
+			}
+
+			.personnel:nth-child(3n) {
+				margin: 0;
+			}
 		}
 
 		.chiefMedicalOfficer {
-		    width: 250px;
-		    height: 250px;
-		    margin: 0 auto;
-		    text-align: center;
-		    border-radius: 100%;
-		    margin-bottom: 20%;
+			width: 250px;
+			height: 350px;
+			margin: 0 auto;
+			text-align: center;
+			margin-bottom: 80px;
+
+			.img {
+				position: relative;
+				width: 250px;
+				height: 250px;
+				background: url(../img/personal/1.jpg) no-repeat;
+				background-size: cover;
+				margin-bottom: 6%;
+				border-radius: 100%;
+				background-color: #bdc3c7;
+				transition: 0.3s ease-out;
+			}
+
+			.img:hover {
+				transform: translateY(-4px);
+  				box-shadow: 0 7px 10px 0 #666;
+			}
+
+			span {
+				font-size: 16px;
+				opacity: 0.7;
+			}
+
+			span:nth-child(3) {
+				font-weight: 700;
+			}
 		}
 
-		.chiefMedicalOfficer .img {
-		    width: 250px;
-		    height: 250px;
-		    background: url(../img/personal/1.jpg) no-repeat;
-		    background-size: cover;
-		    margin-bottom: 6%;
-		    border-radius: 100%;
+		.wrapperButtons {
+			width: 1160px;
+			height: 55px;
+			margin: 0 auto;
+			margin-bottom: 40px;
+			margin-top: 50px;
+			font-size: 13px;
+
+			.wrapperDownloadFile {
+				position: relative;
+				width: 210px;
+				height: 55px;
+				background: #53c4f1;
+				border-radius: 5px;
+				color: white;
+				box-sizing: border-box;
+				cursor: pointer;
+				float: left; 
+				margin-right: 20px;
+				margin-bottom: 10px;
+				overflow: hidden;
+
+				.wrapperText {
+					width: 155px;
+					height: 55px;
+					padding-top: 15px;
+					text-align: center;
+					float: left;
+					transform: translateX(25px);
+					transition: 0.3s ease-in;
+
+					span {
+						vertical-align: middle;
+					}
+				}
+
+				.largeText {
+					padding-top: 6px;
+				}
+
+				.wrapperImgDownload {
+					float: right;
+					width: 55px;
+					height: 55px;
+					background: #20a7dc;
+					border-radius: 0 5px 5px 0;
+					box-sizing: border-box;
+					padding-top: 12px;
+					padding-right: 16px;
+					transform: translateX(55px);
+					transition: 0.3s ease-in;
+
+					.imgDownload {
+						width: 22px;
+						height: 30px;
+						background: url(../img/btn-download.png) no-repeat;
+						background-size: cover;
+						float: right;
+					}
+				}
+			}
+
+			.wrapperDownloadFile:hover {
+				.wrapperText {
+					transform: translateX(0);
+				}
+
+				.wrapperImgDownload {
+					transform: translateX(0);
+				}
+			}
 		}
 
-		.chiefMedicalOfficer span {
-		    font-size: 16px;
-		    opacity: 0.7;
+		.wrapperLisenses {
+			width: 100%;
+			height: 260px;
+			margin-bottom: 20px;
+			clear: both;
+
+			.lisens {
+				width: 180.44px;
+				height: 260px;
+				float: left;
+				margin-right: 20px;
+				margin-bottom: 20px;
+			}
 		}
 
-		.personnel {
-		    width: 200px;
-		    height: 340px;
-		    margin-bottom: 5%;
-		    margin-right: 7%;
-		    text-align: center;
-		    float: left;
+		#small {
+			padding-left: 40px;
 		}
 
-		.personnel .img {
-		    width: 200px;
-		    height: 200px;
-		    border-radius: 100%;
-		    margin-bottom: 7%;
+		#average {
+			padding-left: 60px;
 		}
 
-		.personnel span {
-		    font-size: 15px;
-		    opacity: 0.7;
+		#large {
+			padding-left: 100px;
 		}
 
-		.personnel span:nth-child(3) {
-		    font-weight: 700;
-		    margin-top: 10px;
-		    margin-bottom: 10px;
-		    display: block;
+		#headerTextCenter {
+			text-align: center;
 		}
 
-		.about-images-block {
-		    display: block;
-		    float: left;
-		    width: 35%;
+		.wrapper-svg {
+			width: 71%;
+			height: 400px;
+			margin: 0 auto;
+
+			rect {
+				width: 250px;
+				height: 140px;
+				fill: #2bc3ff;
+			}
+
+			.substation {
+				width: 250px;
+				height: 100px;
+				fill: #2bc3ff;
+			}
+
+			text {
+				font-size: 20px;
+				fill: white;
+			}
+
+			.address {
+				font-size: 12px;
+			}
+
+			polygon {
+				fill: #2bc3ff;
+			}
+
+			.leftArrow {
+				transform: rotate(35deg);
+			}
+
+			.rightArrow {
+				transform: rotate(-35deg);
+			}
 		}
 
 		.wrapperPersonalBlock {
-		    display: block;
-		    float: left;
-		    width: 100%;
-		    margin-bottom: 50px;
+			display: block;
+			float: left;
+			width: 100%;
+			margin-bottom: 50px;
+
+			.img {
+				width: 250px;
+				height: 250px;
+				background: url(../img/personal/5.jpg) no-repeat;
+				background-size: cover;
+				float: left;
+				margin: 9px 40px 20px 0;
+				border-radius: 100%;
+			}
 		}
-
-		.personal-center-block {
-		    display: block;
-		    width: 785px;
-		    margin: 0 auto;
-		    margin-top: 10%;
-		}
-
 	}
-
-	.clearfix {
-	    zoom: 1;
-	}
-
-	.clearfix:before,
-	.clearfix:after {
-	    content: "";
-	    display: table;
-	}
-
-	.clearfix:after {
-	    clear: both;
-	}
-
 }
